@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project name="Meriemi-git/android_device_fairphone_FP3" path="device/fairphone/FP3" remote="github" revision="arrow" depth="0" />
+    <project name="Meriemi-git/android_kernel_fairphone_sdm632" path="kernel/fairphone/sdm632" remote="github" revision="lineage-20" depth="0" />
+    <project name="Meriemi-git/android_vendor_fairphone_FP3" path="vendor/fairphone/FP3" remote="github" revision="arrow" depth="0" />
+    <!-- Override for fix wifi hotspot bug -->
+    <remove-project name="android_hardware_interfaces" />
+    <project name="Meriemi-git/android_hardware_interfaces" path="hardware/interfaces" remote="github" revision="arrow-13.1" depth="0" />
+
+    <project path="hardware/qcom-caf/msm8953/audio" name="LineageOS/android_hardware_qcom_audio"  revision="lineage-20.0-caf-msm8953" remote="github"/>
+    <project path="hardware/qcom-caf/msm8953/display" name="LineageOS/android_hardware_qcom_display"  revision="lineage-20.0-caf-msm8953" remote="github"/>
+    <project path="hardware/qcom-caf/msm8953/media" name="LineageOS/android_hardware_qcom_media" revision="lineage-20.0-caf-msm8953" remote="github"/>
+
+
+    <remove-project name="platform/packages/apps/Calendar" />
+    <remove-project name="platform/packages/apps/Gallery" />
+
+
+      <remote  name="iode"
+           fetch="https://gitlab.com/iode/os/public"/>
+
+    <remove-project name="platform/external/libnetfilter_conntrack" />
+    <remove-project name="platform/external/libnfnetlink" />
+
+    <project path="vendor/extra" name="Meriemi-git/vendor_extra" remote="github" revision="main" />
+    <project path="system/iode-snort" name="blocker/iode-snort" remote="iode" revision="staging" />
+    <project path="external/libnetfilter_conntrack" name="blocker/external_libnetfilter_conntrack" remote="iode" revision="staging" />
+    <project path="external/libnetfilter_queue" name="blocker/external_libnetfilter_queue" remote="iode" revision="staging" />
+    <project path="external/libnfnetlink" name="blocker/external_libnfnetlink" remote="iode" revision="staging" />
+    <project path="external/libmnl" name="blocker/external_libmnl" remote="iode" revision="staging" />
+</manifest>
+
